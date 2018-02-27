@@ -1,0 +1,87 @@
+.what {
+    width: 100%;
+    min-height: 900px;
+    background: $white;
+    overflow-y: hidden;
+
+&__title {
+    @include title;
+}
+
+&__subtitle {
+    @include subtitle;
+}
+
+&__description {
+    @include description;
+    margin-bottom: 92px;
+}
+
+&__content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    @media (max-width: 999px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+}
+
+&__content-img {
+    width: 100%;
+    max-width: 570px;
+    height: auto;
+    @media (max-width: 999px) {
+        margin-bottom: 30px;
+    }
+}
+
+&__accordion {
+    width: 100%;
+    max-width: 600px;
+    max-height: 378px;
+    margin-left: 30px;
+    @media (max-width: 999px) {
+        margin-left: 0;
+    }
+}
+
+&__accordion-item {
+    border: 2px solid $graylight;
+    padding: 15px 0;
+    padding-left: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+        background: $graylight;
+        border: 2px solid $blue;
+        transition: ease-out 0.4s;
+    }
+}
+
+&__accordion-img {
+    width: 100%;
+    max-width: 30px;
+    margin-right: 15px;
+}
+
+&__caption {
+    font: 700 14px "Montserrat";
+    color: $black;
+    text-transform: uppercase;
+}
+
+&__text {
+    border: 2px solid $graylight;
+    border-top: none;
+    padding: 18px 52px 24px 18px;
+    margin-bottom: 10px;
+    @include regular-text;
+    font-style: italic;
+    line-height: 24px;
+}
+}

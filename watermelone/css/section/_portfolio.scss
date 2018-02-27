@@ -1,0 +1,51 @@
+.portfolio {
+    width: 100%;
+    min-height: 876px;
+
+&__wrap {
+    padding-top: 68px;
+    min-height: 876px; 
+}
+
+&__title {
+    font: 400 34px 'Roboto';
+    margin-bottom: 26px;
+}
+
+&__album {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+&__item {
+    border: 2px solid $blue;
+    opacity: 0.7;
+    cursor: pointer;
+    & img {
+        max-width: 100%;
+    }
+    &:nth-child(1n+1) {
+        margin-bottom: 30px;
+    }
+    &:nth-child(odd) {
+        margin-right: 30px;
+        @media (max-width: 825px) {
+            margin-right: 0;
+        }
+    }
+    &:hover {
+        border: 2px solid $red;
+        transition: all 0.5s ease-in-out;
+        opacity: 1;
+    }
+    
+}
+
+&__item-word {
+    font: 400 16px 'Roboto';
+    text-transform: uppercase;
+    text-align: center;
+    padding: 30px 0;
+}
+}
