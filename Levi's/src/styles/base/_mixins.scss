@@ -1,0 +1,12 @@
+@mixin title {
+    font: 900 36px 'Roboto';
+	text-transform: uppercase;
+	color: $red;
+}
+
+@mixin subtitle {
+	font: 400 15px 'Roboto';
+	text-transform: uppercase;
+	text-align: center;
+	color: $black-text;
+}

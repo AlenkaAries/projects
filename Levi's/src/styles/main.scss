@@ -1,0 +1,16 @@
+/* BASE */
+
+@import './base/reset.scss';
+@import 'base/colors.scss';
+@import './base/fonts.scss';
+@import './base/mixins.scss';
+@import './base/base.scss';
+
+/* SECTIONS */
+
+@import './sections/header.scss';
+@import './sections/history.scss';
+@import './sections/boots.scss';
+@import './sections/models.scss';
+@import './sections/comment.scss';
+@import './sections/footer.scss';

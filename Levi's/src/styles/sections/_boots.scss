@@ -1,0 +1,56 @@
+.boots {
+    width: 100%;
+    min-height: 666px;
+    background: $gray;
+
+&__wrap-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 1100px) {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+}
+
+&__item {
+    padding: 10px;
+    @media (max-width: 1100px) {
+        padding: 30px 0;
+    }
+}
+
+&__item-subtitle {
+    font: 400 14px 'Roboto';
+    color: $red;
+    margin-bottom: 10px;
+}
+
+&__item-title {
+    @include title;
+    margin-bottom: 46px;
+    letter-spacing: 3px;
+}
+
+.line {
+    margin-bottom: 56px;
+}
+
+&__list {
+    padding-left: 20px;
+    & li {
+        font: 400 14px 'Roboto';
+        color: $black-text;  
+        line-height: 23px;
+
+    }
+}
+
+&__image {
+    padding-top: 130px;
+    & img {
+        width: 100%;
+        flex-shrink: 2;
+    }
+}
+}
