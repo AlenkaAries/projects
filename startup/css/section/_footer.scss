@@ -1,0 +1,66 @@
+.footer {
+    width: 100%;
+    min-height: 200px;
+    background: $black;
+&__case {
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+&__contacts-adds {
+    text-align: center;
+    font: 400 12px "Roboto Slab";
+    color: $white;
+    line-height: 2;
+    & i {
+        padding-right: 7px;
+    }
+}
+&__social {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+&__social-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    &:last-of-type {
+        margin-right: 0;
+    }
+    &:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1); 
+        box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.904);
+    }
+}
+&__social-icon {
+    color: $white;
+}
+ &__social-one {
+    background: $blue;
+ }
+ &__social-two {
+    background: $blue2;
+ }
+ &__social-three {
+    background: $blue3;
+ }
+ &__social-four {
+    background: $blue4;
+ }
+ &__social-five {
+    background: $blue5;
+ }
+}
+

@@ -1,0 +1,21 @@
+.project {
+    width: 100%;
+    min-height: 372px;
+&__items {
+    width: 100%;
+    min-height: 372px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+&__caption {
+    font: 400 30px 'Roboto Slab';
+    color: $white;
+    text-align: center;
+}
+&__button {
+    @include button;
+    margin-top: 50px;
+}
+}

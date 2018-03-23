@@ -1,0 +1,111 @@
+.form {
+    width: 100%;
+    min-height: 700px;
+    border-bottom: 1px solid $black;
+    &__wrapping {
+        padding: 15px;
+    }
+    &__title {
+        @include title; 
+        margin-bottom: 26px;
+        color: $white;
+    }
+    &__subtitle {
+        text-align: center;
+        @include regular-text;
+        margin-top: 26px;
+        color: $white;
+    }
+    &__message {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 60px;
+        margin-bottom: 30px;
+    }
+    &__message-input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 700px;
+        margin-bottom: 30px;
+        @media (max-width: 700px) {
+            flex-direction: column;
+        }
+    }
+    &__name,
+    &__email {
+        position: relative;
+        width: 100%;
+        max-width: 320px;
+        height: 40px;
+        @media (max-width: 700px) {
+            max-width: 700px;
+        }
+    }
+    &__name {
+        @media (max-width: 700px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__mail {
+        position: relative;
+        width: 100%;
+        max-width: 700px;
+        height: 200px;
+    }
+    &__icon {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px;
+        font-size: 20px;
+        width: 40px;
+        height: 100%;
+        background-color: $black;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__message-data,
+    &__message-text {
+        width: 100%;
+        height: 100%;
+        border: 1px solid $black;
+        outline: none;
+        resize: none;
+        padding-left: 50px;
+        font: 400 14px "Montserrat";  
+        color: $black;
+        background: rgba(255, 255, 255, 0.733);   
+        &:focus {
+            box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.904), 0 0 20px rgba(255, 255, 255, 0.336);
+        } 
+    }
+    &__message-text {
+        padding: 10px 0 0 50px;
+    }
+    &__message-btn {
+        @include button;
+        display: block;
+        margin: 0 auto;
+        &:hover {
+            color: $red;
+            box-shadow: inset 0 0 0 25px $white;
+        }    
+    }
+}  
+
+
+
+
+
+
+
+
+
