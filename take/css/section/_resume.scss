@@ -1,0 +1,52 @@
+.resume {
+&__left {
+    text-align: right;
+    border-right: #d2d2d2 1px solid;
+    @media (max-width: 576px) {
+        text-align: left;
+    }
+} 
+&__right {
+    text-align: left;
+} 
+&__title {
+    font: 500 18px "Roboto";
+    color: $text;
+    text-transform: uppercase;
+    margin: 30px 0;
+    letter-spacing: 2px;
+    @media (max-width: 576px) {
+        margin: 20px 0;
+    }
+}
+
+& i {
+    font-size: 35px;
+}
+
+&__item {
+    margin-top: 35px;
+    @media (max-width: 576px) {
+        margin-top: 15px;
+    }
+}
+
+&__item-year {
+    display: inline-block;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    background-color: $green;
+    font-style: italic;
+    font-weight: bold;
+    color: $white;
+}
+
+&__description {
+    font-style: italic;
+    letter-spacing: 1px;
+    & strong {
+        font-style: normal;
+        text-transform: uppercase;
+    }
+}
+}
