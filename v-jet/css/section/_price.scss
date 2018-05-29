@@ -1,0 +1,114 @@
+.price {
+    width: 100%;
+    min-height: 684px;
+    background: $gray;
+
+&__wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 1010px) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    @media (max-width: 995px) {
+        padding: 15px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+&__title {
+    @include title;
+    margin-bottom: 80px;
+}
+
+&__card {
+    width: 100%;
+    max-width: 312px;
+    height: 411px;
+    background: $white;
+    padding: 60px 41px 41px 41px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @media (max-width: 1000px) {
+        margin-bottom: 55px;
+        &:last-child {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+&__card-circle {
+    width: 88px;
+    height: 88px;
+    background: $white;
+    border-radius: 50%;
+    box-shadow: $gray-text 0px 0px 5px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -45px;
+}
+
+&__card-title {
+    font: 400 24px 'Noto Sans';
+    color: $purple2;
+    text-align: center;
+    margin-bottom: 30px; 
+    white-space: nowrap;
+    @media (max-width: 400px) {
+        font-size: 20px;
+    }
+}
+
+&__value {
+    max-width: 113px;
+    border-top: 1px solid $gray-text;
+    border-bottom: 1px solid $gray-text;
+    margin-bottom: 30px; 
+    @media (max-width: 400px) {
+        margin-bottom: 20px; 
+    }
+}
+
+&__value-numeral {
+    font: italic 48px 'Noto Sans i';
+    color: $purple2;
+    @media (max-width: 400px) {
+        font-size: 38px;
+    }
+}
+
+&__card-text {
+    text-align: center;
+    font: 400 18px 'Noto Sans';
+    color: $gray-text;
+    margin-bottom: 38px; 
+    @media (max-width: 400px) {
+        font-size: 14px;
+        margin-bottom: 45px;
+    }
+}
+
+&__card-btn {
+    @include btn2;
+    background: $purple3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & i {
+        padding-left: 8px;
+    }
+    &:hover {
+        background: $blue;
+    }
+}
+}

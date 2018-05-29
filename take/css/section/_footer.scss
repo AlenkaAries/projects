@@ -1,0 +1,16 @@
+.main__footer {
+    background-color: $black;
+    color: $text;
+    padding: 50px 0;
+    font: 400 16px "Roboto";
+}
+
+.main__footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social__wrap-links {
+    margin-bottom: 0;
+}

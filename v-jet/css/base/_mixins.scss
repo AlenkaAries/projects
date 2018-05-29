@@ -1,0 +1,50 @@
+@mixin title {
+    font: 400 30px "Noto Sans";
+    letter-spacing: 0.04em;
+    color: $purple2;
+    padding-top: 90px;
+    text-align: center;
+}
+
+@mixin works-text {
+    font: 400 16px "Noto Sans";
+    color: $purple2;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin btn {
+    width: 180px;
+    height: 60px;
+    background: $purple;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    color: $white;
+    font: 400 18px "Noto Sans";
+    &:hover {
+        background: $purple2;
+    }
+}
+
+@mixin btn2 {
+    width: 134px;
+    height: 44px;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    display: block;
+    cursor: pointer;
+    color: $white;
+    font: 400 14px "Noto Sans";
+}
