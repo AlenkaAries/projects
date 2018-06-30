@@ -1,0 +1,124 @@
+.about {
+    background: $white;
+
+&__title {
+    @include title;
+}
+
+&__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 1100px) {
+        justify-content: center;
+    }
+}
+
+&__item {
+    min-height: 196px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 70px;
+    @media (max-width: 1100px) {
+        margin-bottom: 50px;
+    }
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+}
+
+&__item-left {
+    flex-direction: row;
+    @media (max-width: 1100px) {
+        margin-bottom: 50px;
+    }
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+}
+
+&__img {
+    border: 3px solid $purple;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    & img {
+        border-radius: 50%;
+        width: 100%;
+    }
+}
+
+&__text {
+    text-align: right;
+    margin-right: 40px;
+    @media (max-width: 600px) {
+        margin-right: 0;
+        text-align: center;
+    }
+}
+
+&__text-left {
+    text-align: left;
+    margin-left: 40px;
+    @media (max-width: 600px) {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+&__name {
+    font: 600 18px "Open Sans";
+    color: $black;
+    line-height: 24px;
+}
+
+&__post {
+    font: 400 14px "Open Sans";
+    color: $black-text;
+}
+
+&__description {
+    max-width: 273px;
+    font: 400 16px "Open Sans";
+    color: $black-text;
+    border-top: 1px solid #000;
+    padding: 10px 0;
+}
+
+&__social {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    @media (max-width: 600px) {
+        justify-content: space-around;
+    }
+}
+
+&__social-left {
+    flex-direction: row;
+}
+
+&__icon {
+    margin-left: 20px;
+    @media (max-width: 600px) {
+        margin-left: 0;
+    }
+}
+
+&__icon-left {
+    margin-right: 20px;
+}
+
+& .fa {
+    font-size: 18px;
+    color: $purple;
+    &:hover {
+        color: $black;
+    }
+}
+}

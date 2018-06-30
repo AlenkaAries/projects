@@ -1,0 +1,119 @@
+.testimonials {
+    width: 100%;
+    background: linear-gradient(-16deg,#ae60e3,#9a73e7 52%,#798ff0);
+
+&__title {
+    @include title;
+}
+
+&__slide {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    min-height: 250px;
+    background: transparent;
+    margin: 0 auto;
+}
+
+&__slide-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+&__slide-slide {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 500px) {
+        flex-direction: column;
+    }
+}
+
+&__slide-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+&__slide-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+&__slide-text {
+    width: 70%;
+    max-width: 750px;
+    margin-left: 70px;
+    @media (max-width: 500px) {
+        margin-left: 0;
+    }
+}
+
+&__slide-about {
+    width: 100%;
+    max-width: 754px;
+    font: 400 16px 'Open Sans';
+    color: $gray;
+    line-height: 25px;
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+&__slide-partho {
+    text-transform: uppercase;
+    color: $black;
+    font: 700 16px 'Open Sans';
+}
+
+&__slide-founder {
+    text-transform: uppercase;
+    font: 400 14px 'Open Sans';
+    color: $black;
+}
+
+.slick-dots {
+    width: 80px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+        list-style-type: none;
+        width: 14px;
+        height: 14px;
+        background-color: $white;
+        border: 1px solid $black;
+        border-radius: 50%;
+        margin-right: 14px;
+        cursor: pointer;
+        &.slick-active {
+            background: $black;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &:hover {
+            background-color: $black;
+        }
+        button {
+            display: block;
+            border: none;
+            font-size: 0;
+            padding: 0;
+            background: none;
+        } 
+        
+    }
+}
+}
