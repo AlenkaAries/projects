@@ -1,0 +1,33 @@
+.about {
+&__img {
+    @media (max-width: 768px) {
+        margin-bottom: 30px;
+    }
+}
+
+&__text {
+    margin-left: 115px;
+    @media (max-width: 768px) {
+        margin-left: 0;
+    }
+}  
+
+&__title {
+    font: 400 35px "Wendy One";
+    color: $gray-text2;
+    margin-bottom: 35px;
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+}
+
+&__descr {
+    font: 400 15px "Lato";
+    line-height: 30px;
+    color: $gray-text2;
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+}

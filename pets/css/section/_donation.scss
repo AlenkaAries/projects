@@ -1,0 +1,43 @@
+.donation {
+    background-color: $look-bgc;
+
+&__title {
+    @include title;
+    margin-bottom: 30px;
+}
+
+&__bank {
+    font: 400 15px "Lato";
+    color: $gray-text2;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+&__card {
+    padding: 10px 12px;
+    background: $accent;
+    border-radius: 10px;
+    font: 400 15px "Lato";
+    color: $gray-text2;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & i {
+        font-size: 20px;
+    }
+}
+
+&__card-number {
+    letter-spacing: 2px;
+    margin-left: 15px;
+}
+
+&__info {
+    font: 300 15px "Lato";
+    font-style: italic;
+    color: $gray-text;
+    padding: 5px;
+}
+}

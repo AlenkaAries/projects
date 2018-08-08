@@ -1,0 +1,101 @@
+.look {
+    background-color: $look-bgc;
+
+&__title {
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 40px;
+    @include title;
+    padding-bottom: 60px;
+}
+
+&__slaider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+&__slaid {
+    width: 270px;
+    height: 420px;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 50px;
+    @media (max-width: 600px) {
+        margin-right: 0;
+    }
+}
+
+&__slaid-img {
+    height: 250px;
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+&__slaid-name {
+    font: 400 20px "Lato";
+    color: $gray-text2;
+}
+
+&__slaid-btn, &__btn {
+    padding: 10px 30px;
+    border: 2px solid $accent;
+    border-radius: 30px;
+    font: 700 15px "Lato";
+    background-color: $white;
+    white-space: nowrap;
+    &:hover {
+        background-color: $accent;
+    }
+}
+
+&__slaid-btn {
+    @media (max-width: 845px) {
+        font-size: 12px;
+        padding: 7px 20px;
+    }
+}
+
+&__btn {
+    display: block;
+    margin: 0 auto;
+}
+
+&__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: $gray-text2;
+    border: 2px solid $accent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 25px;
+    z-index: 9;
+    &:hover {
+      border-color: $accent;
+      background-color: $accent;
+    }
+    &--prev {
+      left: 20px;
+    }
+    &--next {
+      right: 20px;
+    }
+}
+}
+
+.slick-slider {
+    
+    @media (max-width: 600px) {
+        padding: 0;
+    }
+}

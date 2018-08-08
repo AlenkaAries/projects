@@ -1,0 +1,39 @@
+.help {
+&__title {
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 40px;
+    @include title;
+}
+
+&__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+    @media (max-width: 900px) {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+&__item {
+    width: 165px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    & i {
+        font-size: 50px;
+        color: $accent;
+        margin-bottom: 10px;
+    }
+}
+
+&__item-title {
+    font: 700 20px 'Lato';
+    color: $gray-text2;
+    white-space: nowrap;
+}
+}
