@@ -1,0 +1,94 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+
+.team__card {
+    margin-bottom: 30px;
+}
+
+.contacts__item, .portfolio__items {
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+
+
+    .main__title {
+        font-size: 28px;
+    }
+
+    .section__title {
+        font-size: 14px;
+    }
+
+    .button__btn {
+        width: 260px;
+    }
+
+    .send__wrap-wrap {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .send__mail {
+        width: 270px;
+        margin-bottom: 20px;
+        //text-align: center;
+    }
+
+    .send__button {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .problems__title {
+        font-size: 30px;
+    }
+
+    .problems__subtitle {
+        font-size: 18px;
+    }
+
+}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+    
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}
