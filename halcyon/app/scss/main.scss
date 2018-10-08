@@ -1,0 +1,707 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "colors";
+
+::placeholder {
+	color: #666;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	//line-height: 1.65;
+	overflow-x: hidden;
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a, button {
+	cursor: pointer;
+	transition: ease-out 0.5s;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+.section__contain {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section__title {
+	font: 700 15px "Muli";
+	color: $black;
+	text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.social {
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social__links {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background: $green;
+        //text-decoration: none;
+    }
+    & i {
+        color: $white;
+    }
+}
+
+.decoration {
+    display: block;
+    width: 30px;
+    margin: 0 auto;
+    text-align: center;
+    //background-color: $gray-bg;
+    font-size: 15px;
+    padding: 0 7px;
+    color: $black;
+    position: relative;
+    z-index: 1;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: calc((-150px + 30px)/2);
+        height: 1px;
+        width: 150px;
+        background-color: $green;
+        transform: translateY(-50%);
+        z-index: -1; 
+    }
+}
+
+.white {
+    color: $white;
+}
+
+.flex__center {
+    justify-content: center;
+}
+
+
+//////////////////////HEADER\\\\\\\\\\\\\\\\\\\\\\\\
+
+.main {
+	width: 100%;
+	height: 100vh;
+	background: url('../img/bg.png') no-repeat center/cover;
+
+&__content {
+	text-align: center;
+}
+
+&__title {
+	font: 400 40px "Muli";
+	text-transform: uppercase;
+	letter-spacing: 8px;
+	margin-bottom: 15px;
+	& span {
+		color: $gray-text;
+	}
+}
+
+&__subtitle {
+	font: 400 15px "Muli";
+	color: $gray-text;
+	letter-spacing: 2px;
+	margin-bottom: 50px;
+}
+
+&__btn {
+	background-color: $green;
+	color: $white;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	&:hover {
+		background-color: $black;
+	}
+}
+}
+
+.navBurger {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    background: #111;
+    box-sizing: border-box;
+    background-clip: content-box;
+    width: 30px;
+    height: 24px;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    z-index: 12;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        background: #111;
+        height: 2px;
+        width: 100%;
+        right: 0;
+        will-change: rotate;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+    &:before {
+        top: -10px;
+    }
+    &:after {
+        bottom: -10px;
+        width: 90%;
+    }
+    &.active {
+        background: transparent;
+        background-clip: content-box;
+    }
+    &.active:before {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+        top: 0;
+        background: $green;
+        width: 110%;
+    }
+    &.active:after {
+        bottom: 0;
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+        background: $green;
+        width: 110%;
+    }
+}
+
+.overlay {
+    position: fixed;
+    background: #1a1f29;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform-origin: right top;
+    transform: scale(0);
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    z-index: 10;
+    &.open {
+        opacity: 0.99;
+        visibility: visible;
+        transform: scale(1);
+        li {
+            display: block;
+            animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5)
+                forwards;
+            animation-delay: 0.4s;
+            transform: rotate(-7deg);
+            transform-origin: right bottom;
+            &:nth-of-type(2) {
+                animation-delay: 0.5s;
+            }
+            &:nth-of-type(3) {
+                animation-delay: 0.6s;
+            }
+            &:nth-of-type(4) {
+                animation-delay: 0.7s;
+            }
+            &:nth-of-type(5) {
+                animation-delay: 0.8s;
+            }
+        }
+    }
+}
+
+.overlayMenu {
+    position: absolute;
+    text-align: right;
+    right: 10vw;
+    bottom: 10vw;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        height: 100%;
+        li {
+            display: block;
+            position: relative;
+            opacity: 0;
+            width: 100%;
+            a {
+                display: inline-block;
+                border: 1px solid rgba(255, 255, 255, 0.09);
+                color: #fff;
+                text-decoration: none;
+                font-size: 30px;
+                padding: 10px 40px 10px 40px;
+                margin: 5px 0;
+                transition: 0.2s;
+                &:hover,
+                &:active,
+                &:focus {
+                    transform: translateX(-2px);
+                    padding-left: 80px;
+                    outline: 1px solid rgba(255, 255, 255, 0.3);
+                    background: rgba(255, 255, 255, 0.03);
+                }
+            }
+        }
+    }
+}
+
+.locked {
+    overflow: hidden;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 50px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+    }
+}
+
+///////////Creative\\\\\\\\\\\
+
+.creativ {
+	width: 100%;
+	padding: 100px 0 120px 0;
+	background: $gray-bg;
+
+&__text {
+	text-align: center;
+    color: $gray-text;
+    line-height: 1.85;
+    padding-top: 50px;
+}
+}
+
+///////////About\\\\\\\\\\\
+
+.about {
+	width: 100%;
+    padding: 100px 0 120px 0;
+
+&__indent {
+    margin-top: 80px;
+}
+
+&__item {
+	//border: 1px solid black;
+	width: 350px;
+	height: 370px;
+}
+
+&__item-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: $green;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+&__item-icon {
+    font-size: 60px;
+    color: $white;
+}
+
+&__item-title {
+	text-align: center;
+	font: 700 15px "Muli";
+	text-transform: uppercase;
+    color: $black; 
+}
+
+&__item-text {
+	text-align: center;
+	font: 400 14px "Muli";
+    color: $gray-text;
+    &:before {
+        content: "";
+        height: 3px;
+        width: 30px;
+        background: $green;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
+}
+
+
+///////////DESIGN\\\\\\\\\\\
+
+.design {
+    height: 700px;
+  &:before {
+    content: "";
+    display: block;
+    background-image: url('../img/phone.png') no-repeat center/cover;
+    position: relative;  
+    top: 30px;
+  }
+}
+
+///////////PROBLEMS\\\\\\\\\\\
+
+.problems {
+    width: 100%;
+    height: 300px;
+    background: url("../img/bg-2.png")center/cover;
+
+&__wrap {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+&__title {
+    font: 400 40px "Muli";
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 6px;
+}
+
+&__subtitle {
+    font: 400 25px "Muli";
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+&__link {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $green;
+    border-radius: 50%;
+}
+
+&__link-icon {
+    color: $white;
+    font-size: 30px;
+}
+}
+
+///////////PORTFOLIO\\\\\\\\\\\
+
+.portfolio {
+    width: 100%;
+	padding: 100px 0 120px 0;
+
+&__items {
+    width: 100%;
+    max-width: 360px;
+    height: 370px;
+    text-align: center;
+    margin-right: 30px;
+    &:last-child {
+        margin-right: 0;
+    }
+}    
+
+&__img {
+    width: 100%;
+    max-width: 360px;
+    max-height: 200px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    & img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+&__items-title {
+    text-transform: uppercase;
+    font: 700 15px "Muli";
+    letter-spacing: 2px;
+    color: $black;
+    margin-bottom: 10px;
+    
+}
+
+&__items-text {
+    font: 400 14px "Muli";
+    color: $gray-text;
+    &:before {
+        content: "";
+        height: 3px;
+        width: 30px;
+        background: $green;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
+}
+
+///////////BUTON\\\\\\\\\\\
+
+.button {
+    width: 100%;
+    background: $black;
+    padding: 60px 0;
+
+&__btn{
+    display: block;
+    width: 295px;
+    height: 70px;
+    border: 2px solid $gray-text;
+    border-radius: 3px;
+    color: $white;
+    background: transparent;
+    text-transform: uppercase;
+    font: 400 15px "Muli";
+    letter-spacing: 2px;
+    margin: 0 auto;
+    &:hover {
+        background: $green;
+        border-color: $green;
+    }
+}    
+}
+
+///////////TEAM\\\\\\\\\\\
+
+.team {
+    padding: 80px 0 100px 0;
+
+&__contain {
+    margin-top: 60px;
+}
+
+&__card {
+    width: 100%;
+    max-width: 370px;
+    min-height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}    
+
+&__foto {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 205px;
+    height: 220px;
+}
+
+&__name {
+    text-transform: uppercase;
+    font: 700 15px "Muli";
+    letter-spacing: 2px;
+    color: $black;
+}
+
+&__about {
+    font: 400 14px "Muli";
+    color: $gray-text;
+}
+}
+
+///////////SEND\\\\\\\\\\\
+
+.send {
+    height: 450px;
+    background: url("../img/bg-3.png") center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+&__icon {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+&__wrap {
+    width: 100%;
+    max-width: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}    
+
+&__wrap-wrap {
+    display: flex;
+}
+
+&__mail {
+    //width: 100%;
+    width: 355px;
+    height: 70px;
+    border: 2px solid $gray-text;
+    border-radius: 3px;
+    background: transparent;
+    outline: none;
+    padding-left: 15px;
+    margin-right: 5px;
+    font: 400 18px "Muli";
+    &:focus {
+        background: #e5eeedf5;
+    }
+}
+
+&__button {
+    width: 100px;
+    height: 70px;
+    background: $green;
+    text-transform: uppercase;
+    color: $white;
+    font: 700 15px "Muli";
+    border: none;
+    border-radius: 3px;
+    letter-spacing: 3px;
+    &:hover {
+        background: $black;
+        color: $green;
+    }
+}
+}
+
+/////////CONTACTS\\\\\\\\\\\\
+
+.contacts {
+    padding: 120px 0 110px 0;
+    background: $gray-bg;
+
+&__wrap {
+    margin-top: 90px;
+}
+
+&__item {
+    width: 100%;
+    max-width: 360px;
+    height: 150px;
+    background: $white;
+    margin-right: 30px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+&__icon {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+&__head {
+    text-transform: uppercase;
+    color: $green;
+    font: 700 14px "Muli";
+    margin-bottom: 25px;
+}
+
+&__text {
+    color: $gray-text;
+    font: 400 14px "Muli";
+    letter-spacing: 2px;
+}
+
+&__social {
+    width: 100%;
+    max-width: 160px;
+    margin: 0 auto;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+}
+
+///////FOOTER\\\\\\\\\\\\\\\\
+.footer {
+    width: 100%;
+    height: 120px;
+    background: $black;
+    padding: 50px 0;
+    color: $gray-text;
+}
+
+
+@import "media"; // Always at the end

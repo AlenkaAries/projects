@@ -1,0 +1,14 @@
+@mixin title {
+    font: 700 50px 'Open Sans';
+	text-transform: uppercase;
+	color: $black;
+	text-align: center;
+	margin-bottom: 90px;
+}
+
+@mixin subtitle {
+	font: 400 15px 'Roboto';
+	text-transform: uppercase;
+	text-align: center;
+	color: $black-text;
+}

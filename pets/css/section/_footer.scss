@@ -1,0 +1,64 @@
+.footer {
+    width: 100%;
+    min-height: 382px;
+    overflow: hidden;
+    background-color: #292322;
+
+&__contacts {
+    @media (max-width: 768px) {
+        margin-bottom: 30px;
+    }
+}
+
+&__adress {
+    @media (max-width: 768px) {
+        margin-bottom: 30px;
+    }
+}
+
+&__item {
+    padding: 75px 0 0 0;
+}
+
+&__title {
+    font: 400 35px "Wendy One";
+    color: $accent;
+    margin-bottom: 40px;
+    @media (max-width: 768px) {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+&__icon {
+    font-size: 40px;
+    color: $accent;
+    margin-right: 15px;
+}
+
+&__text {
+    font: 400 20px "Lato";
+    color: $accent;
+}
+
+&__adress-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+&__img-dog {
+    width: 100%;
+    min-width: 294px;
+    height: 313px;
+    margin-left: 65px;
+    object-fit: contain;
+    @media (max-width: 768px) {
+       margin-left: 0;
+    }
+}
+}
